@@ -1,0 +1,135 @@
+<html lang="en" ng-app="MaterialApp">
+  <head>
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <!---Bootstrap lInks---->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!---fonts---->
+      <link href="https://fonts.googleapis.com/css?family=Aldrich|Audiowide|Bangers|Bungee+Inline|Hanuman|Monoton|Orbitron|Press+Start+2P|Righteous|Unica+One|VT323|Zilla+Slab+Highlight" rel="stylesheet">      
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="app.css">
+  </head>
+  <body ng-controller="Main as ctrl">
+  <div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="mySidebar">
+      <button class="w3-bar-item w3-button w3-large"
+      ng-click="ctrl.w3_close()">Close &times;</button>
+      <a href="#main" class="w3-bar-item w3-button">ME</a>
+      <a href="#skills   " class="w3-bar-item w3-button">MAD Skillz</a>
+      <a href="#" class="w3-bar-item w3-button">XP</a>
+    </div>
+    
+    <div zclass="w3-main" id="main">
+    <div class="w3-purple">
+      <button class="w3-button w3-purple w3-xlarge" ng-click="ctrl.w3_open()">&#9776;</button>
+      <div class="w3-container">
+        <center><h1 id="myName">Kristofer Inniss</h1></center>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+<!---ME Div---->
+    <div class="col-sm-12 w3-card-4 w3-margin-right myCard">
+        <div col-sm-12>
+            <center><h1 id="myName">About Me</h1></center>
+        </div>
+        <div class="col-sm-3">
+            <img src="me.jpg" style="width:100%" class="w3-card-2 img-responsive">
+        </div>    
+        <div class="col-sm-8">
+            <p>Lorem ipsum dolor sit amet, ac tempus hymenaeos, morbi felis ut et hac non ultrices, mi amet rerum turpis magnis dui suspendisse, eleifend a risus omnis, consectetuer lorem orci in. Sit imperdiet aliquam quis augue eos lacus. </p>
+        </div>
+    </div>
+<!---Hobbies Div---->
+      <div class="col-sm-12 w3-card-4 myCard">
+          <div col-sm-12>
+              <center><h1 id="myName">Hobbies</h1></center>
+          </div>
+          <center>
+          <ul class="list-inline list-unstyle">
+          <li>  
+          <div class="w3-card-4 imgCard "  >
+              <img class="hobiImg" src="https://s-media-cache-ak0.pinimg.com/originals/9c/bb/c3/9cbbc3e35370f0941285045786dd2f2f.jpg" alt="Norway" class="img-responsive" style="width:100%">
+              <div class="w3-center">
+                <button  ng-click="ctrl.dropArt()" class="ddBtn"><p>Drawing & Painting</p></button>
+                <div id="art" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                  <p>Stuf and more stuff about words and such</p>
+                </div>
+              </div>
+          </div>
+          </li>
+          <li>  
+          <div class="w3-card-4 imgCard "  >
+              <img class="hobiImg" src="https://crushthestreet.com/wp-content/uploads/2017/06/gamingincolor1.jpg" alt="Norway" class="img-responsive" style="width:100%">
+              <div class="w3-center">
+                <button ng-click="ctrl.dropGame()" class="ddBtn"><p>Video Games</p></button>
+                <div id="game" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                  <p>Stuf and more stuff about words and such</p>
+                </div>
+              </div>
+          </div>
+          </li>
+          <li>  
+          <div class="w3-card-4 imgCard "  >
+              <img class="hobiImg" src="https://edge.alluremedia.com.au/m/k/2016/01/shutterstock-programming.jpg" alt="Norway" class="img-responsive" style="width:100%">
+              <div class="w3-center">
+                <button ng-click="ctrl.dropDev()" class="ddBtn"><p>Programming & Development</p></button>
+                <div id="dev" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                  <p>Stuf and more stuff about words and such</p>
+                </div>
+              </div>
+          </div>
+          </li>
+          </ul>
+        </center>
+      </div>
+  <!---Skills---->
+  <div class="col-sm-12 w3-card-4 myCard">
+      <div col-sm-12>
+          <center><h1 id="myName">Skills</h1></center>
+      </div>
+      <div>
+        <ul class="list-unstyled">
+         
+          <li ng-repeat="skill in ctrl.category">
+            <p>{{skill.name}}</p>
+            <button class="w3-button w3-purple" ng-click="ctrl.start(skill.id)">XP</button>
+            <div class="w3-border">
+                <div id={{skill.id}} class="w3-red" style="height:50px;width:0%"></div>
+              </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+   <!---Skills---->
+  <div class="col-sm-12 w3-card-4 myCard">
+      <div class="col-sm-12" style="margin-bottom:3%;">
+          <center id="skills"><h1 id="myName">Languages & Frameworks</h1></center>
+      </div>
+      <center>
+      <ul class="list-inline list-unstyle">
+      <li ng-repeat="skill in ctrl.skills">  
+      <div class="w3-card-4 imgCard "  >
+          <img class="skillImg" src={{skill.img}} class="img-responsive" style="width:100%">
+          <div class="w3-center">
+            <p>{{skill.name}}</p>
+            </div>
+          </div>
+      </div>
+      </li>
+      </ul>
+    </center>
+  </div>
+
+ 
+    <script src="app.js"></script>
+  </body>
+</html>

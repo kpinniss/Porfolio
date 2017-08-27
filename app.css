@@ -1,0 +1,80 @@
+/* font-family: 'Zilla Slab Highlight', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Audiowide', cursive;
+font-family: 'Aldrich', sans-serif;
+font-family: 'Monoton', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Unica One', cursive;
+font-family: 'VT323', monospace;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Hanuman', serif;
+font-family: 'Bungee Inline', cursive; */
+
+body{
+margin:auto, 0;
+padding:auto, 0;
+background-color:#2196F3; 
+}
+.container{
+    
+}
+.mainNav{
+    background-color:#01BAEF; 
+}
+
+
+
+#w3-teal{
+    background-color:#01BAEF;
+}
+#mySidebar{
+    background-color: #FF9800;
+}
+.w3-bar-item{
+font-size: 2em;    
+font-family: 'Bangers', cursive;
+}
+.imgCard{
+    width:300px;
+    min-height: 350px;
+    background-color: #9C27B0;
+    color:white;
+}
+#myName{
+    font-size: 2.5em;
+    font-family: 'Press Start 2P', cursive;
+    
+}
+.myCard{
+    background-color:#01BAEF;
+    padding:4%;
+    margin:2%;
+    margin-top:5%;
+}
+li{
+    margin-right:1.7%;
+    margin-left:1.8%;
+    margin-bottom: 2%;
+}
+p{
+    font-size:1.3em;
+    margin:.5%;
+    font-weight: bolder;
+}
+.ddBtn{
+    background-color: #9C27B0;
+    color:white;
+    border:none;
+}
+button:hover{
+    background-color: #9C27B0;
+}
+.hobiImg{
+    margin-bottom:1%;
+}
+.skillImg{
+    width:100%;
+    margin:3%;
+    margin-left:-.5%;
+}
