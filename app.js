@@ -1,6 +1,7 @@
 
 class Main{
     constructor(){
+        this.imgSrc = document.getElementById("meImg");
         this.social=[
             {name:"GitHub", url:"https://github.com/kpinniss", img:"https://assets.ifttt.com/images/channels/2107379463/icons/monochrome_large.png"},
             {name:"LinkedIn", url:"https://www.linkedin.com/in/kristofer-inniss-24a66980/", img:"http://www.iconsplace.com/download/white-linkedin-512.png"},
@@ -32,8 +33,34 @@ class Main{
             // {name:"Game Maker", img:"https://maxcdn.icons8.com/Share/icon/androidL/Logos//game_maker1600.png"},
             // {name:"Unreal Engine", img:"http://fc08.deviantart.net/fs71/f/2014/133/5/9/utlogo_by_crotale-d7iaqud.png"},
         ];
+        this.x = 0;
+        setInterval((event)=>{
+            this.changeImage(this.x)
+            this.x++; 
+            if(this.x > 4)
+                {
+                    this.x =0;
+                }
+        }, 500);
     }
-//"https://www.loggly.com/wp-content/uploads/2017/03/setup-net.png"
+    changeImage(x)
+    {
+        var img = document.getElementById("meImg");
+        var images = ["me1.png","me2.png","me3.png","me4.png","me5.png"]
+        img.src = images[x];
+        console.log("change");
+        x++;
+    
+        if(x >= images.length){
+            x = 0;
+        } 
+    
+    }
+
+    
+    
+  
+
     w3_open() {
         document.getElementById("main").style.marginLeft = "25%";
         document.getElementById("mySidebar").style.width = "25%";
