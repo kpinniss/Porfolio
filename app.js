@@ -1,6 +1,19 @@
 
 class Main{
     constructor(){
+        this.social=[
+            {name:"GitHub", url:"https://github.com/kpinniss", img:"https://assets.ifttt.com/images/channels/2107379463/icons/monochrome_large.png"},
+            {name:"LinkedIn", url:"https://www.linkedin.com/in/kristofer-inniss-24a66980/", img:"http://www.iconsplace.com/download/white-linkedin-512.png"},
+            {name:"Personal Email", url:"mailto:cyberfungames@gmail.com", img:"https://www.shareicon.net/download/2016/06/21/607565_gmail.ico"},
+         
+
+        ];
+        this.jobs = [
+            {name:"Oragami Owl", jobTitle:"Fullstack Web Developer", desc:"Fullstack .net development wiht MVC", date:"Currently Employeed"},
+            {name:"Exeter", jobTitle:"Programmer / Assistant Instructor", desc:"Curriculum testing, and reviewing. Assited with teaching and tutoring students on programming principals.", date:"Nov 2016 - Sept 2017"},
+            {name:"Digital Dream Forge", jobTitle:"QA Tester", desc:"Run test on software(mostly mobile games) on different platforms while checking for bugs, grammer flaws and playabilaty issues. ", date:"May 2016 - Aug 2016"},
+            {name:"DLS", jobTitle:"Computer Repair Technician", desc:"PC Remanufacturing, Laptop Repair, Desktop PC cusomization / building", date:"Aug 2015 - May 2016"},
+        ];
         this.category = [
             {name:"Design", id:"delm"},
             {name:"Programming", id:"pelm"},

@@ -18,26 +18,34 @@
       <link rel="stylesheet" href="app.css">
   </head>
   <body ng-controller="Main as ctrl">
+<!--Nav---->
   <div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="mySidebar">
       <button class="w3-bar-item w3-button w3-large"
       ng-click="ctrl.w3_close()">Close &times;</button>
-      <a href="#main" class="w3-bar-item w3-button">ME</a>
+      <a href="#about" class="w3-bar-item w3-button">ME</a>
       <a href="#skills   " class="w3-bar-item w3-button">MAD Skillz</a>
-      <a href="#" class="w3-bar-item w3-button">XP</a>
+      <a href="#xp" class="w3-bar-item w3-button">XP</a>
     </div>
-    
+    <div id="about"></div>
     <div zclass="w3-main" id="main">
     <div class="w3-purple">
       <button class="w3-button w3-purple w3-xlarge" ng-click="ctrl.w3_open()">&#9776;</button>
-      <div class="w3-container">
-        <center><h1 id="myName">Kristofer Inniss</h1></center>
+      <img width="150" id="meImg" src="mepixel.png" alt="">
+      <ul class="pull-right list-unstyled list-inline" style="width:15%; margin-top:3%;">
+          <li  ng-repeat="soc in ctrl.social">
+              <a href={{soc.url}}><img width="50" src={{soc.img}} alt=""></a>
+          </li>
+       </ul>
+      <div id="navContent" class="w3-container">
+          <center><h1 id="myName">Kristofer Inniss</h1></center>
+           
       </div>
     </div>
   </div>
 
   <div class="container">
 <!---ME Div---->
-    <div class="col-sm-12 w3-card-4 w3-margin-right myCard">
+    <div id="top" class="col-sm-12 w3-card-4 w3-margin-right myCard">
         <div col-sm-12>
             <center><h1 id="myName">About Me</h1></center>
         </div>
@@ -61,7 +69,7 @@
               <div class="w3-center">
                 <button  ng-click="ctrl.dropArt()" class="ddBtn"><p>Drawing & Painting</p></button>
                 <div id="art" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
-                  <p>Stuf and more stuff about words and such</p>
+                  <p>I love to sketch and paint im my spair time. Also helps when im looking for that next great game idea.</p>
                 </div>
               </div>
           </div>
@@ -72,27 +80,28 @@
               <div class="w3-center">
                 <button ng-click="ctrl.dropGame()" class="ddBtn"><p>Video Games</p></button>
                 <div id="game" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
-                  <p>Stuf and more stuff about words and such</p>
+                  <p>Im a game lover of all kinds from table top, to fighting, hack n slash, adventure, rpg, fps and everything in between.</p>
                 </div>
               </div>
           </div>
           </li>
           <li>  
-          <div class="w3-card-4 imgCard "  >
+          <div  class="w3-card-4 imgCard "  >
               <img class="hobiImg" src="https://edge.alluremedia.com.au/m/k/2016/01/shutterstock-programming.jpg" alt="Norway" class="img-responsive" style="width:100%">
               <div class="w3-center">
                 <button ng-click="ctrl.dropDev()" class="ddBtn"><p>Programming & Development</p></button>
                 <div id="dev" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
-                  <p>Stuf and more stuff about words and such</p>
+                  <p>I love to code! nuff said. >_<</p>
                 </div>
               </div>
           </div>
           </li>
           </ul>
         </center>
+        <div id="skills"></div>
       </div>
   <!---Skills---->
-  <div class="col-sm-12 w3-card-4 myCard">
+  <div  class="col-sm-12 w3-card-4 myCard">
       <div col-sm-12>
           <center><h1 id="myName">Skills</h1></center>
       </div>
@@ -112,22 +121,46 @@
    <!---Skills---->
   <div class="col-sm-12 w3-card-4 myCard">
       <div class="col-sm-12" style="margin-bottom:3%;">
-          <center id="skills"><h1 id="myName">Languages & Frameworks</h1></center>
+          <center ><h1 id="myName">Languages & Frameworks</h1></center>
       </div>
       <center>
-      <ul class="list-inline list-unstyle">
+      <ul class="list-inline list-unstyle" style="font-family: Orbitron">
       <li ng-repeat="skill in ctrl.skills">  
-      <div class="w3-card-4 imgCard "  >
+      <div  class="w3-card-4 imgCard "  >
           <img class="skillImg" src={{skill.img}} class="img-responsive" style="width:100%">
           <div class="w3-center">
-            <p>{{skill.name}}</p>
+            <p >{{skill.name}}</p>
             </div>
           </div>
-      </div>
       </li>
       </ul>
     </center>
+    <div id="xp"></div>
   </div>
+  
+
+  <!--Experience---->
+<div class="col-sm-12 w3-card-4 myCard">
+    <div col-sm-12>
+        <center><h1 id="myName">Experience</h1></center>
+    </div>
+    <div style="font-family:Righteous">
+      <ul class="w3-purple w3-card-4 list-unstyled" style="padding:2%;">
+        <li  ng-repeat="job in ctrl.jobs">
+          <div>
+            <p>{{job.name}}</p>
+            <p>{{job.jobTitle}}</p>
+            <h4 style="font-family: Righteous"><i>{{job.date}}</i></h4>
+            <h3 style="font-family: Righteous">{{job.desc}}</h3>
+            ________________________________________________________
+          </div>
+        </li>
+     </ul>
+    </div>
+  </div>
+
+  </div>
+
 
  
     <script src="app.js"></script>

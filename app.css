@@ -14,13 +14,24 @@ font-family: 'Bungee Inline', cursive; */
 body{
 margin:auto, 0;
 padding:auto, 0;
-background-color:#2196F3; 
+background-color:#2095F3; 
 }
 .container{
     
 }
 .mainNav{
     background-color:#01BAEF; 
+    
+}
+#main{
+    position: fixed; /* Set the navbar to fixed position */
+    margin-bottom:5%;
+    width: 100%; /* Full width */
+    z-index: 1;
+}
+
+#top{
+    margin-top:30%;
 }
 
 
